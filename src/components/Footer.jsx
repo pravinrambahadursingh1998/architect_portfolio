@@ -1,4 +1,4 @@
-import { ArrowUp, Compass, Mail } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from './Icons';
 import './Footer.css';
 
@@ -16,12 +16,21 @@ export default function Footer() {
         <div className="footer-top-grid">
           <div className="footer-brand-col">
             <div className="footer-logo">
-              <Compass size={24} className="footer-logo-icon" />
-              <span className="footer-logo-title">STUDIO MITHUN</span>
+              <div className="footer-logo-wrapper">
+                <img
+                  src="/images/logo.png"
+                  alt="S & A Design Logo"
+                  className="footer-logo-img"
+                />
+              </div>
+              <div className="footer-logo-text">
+                <span className="footer-logo-title">S & A DESIGN</span>
+                <span className="footer-logo-subtitle">Interior Designer & Turnkey Contractor</span>
+              </div>
             </div>
             <p className="footer-desc">
-              Bespoke interior architecture, residential sanctuaries, and boutique commercial
-              atmospheres sculpted with timeless precision, noble stone, and ambient light.
+              Bespoke interior architecture, residential sanctuaries, and turnkey contracting
+              sculpted with timeless precision, noble materials, and ambient light.
             </p>
             <div className="footer-direct-enquiry">
               <span className="footer-enquiry-label">Private Inquiries & Briefs:</span>
@@ -85,7 +94,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
           <p className="copyright-text">
-            &copy; {new Date().getFullYear()} Studio Mithun Architectural Interiors. All Rights Reserved.
+            &copy; {new Date().getFullYear()} S & A Design. All Rights Reserved.
           </p>
 
           <div className="legal-links">

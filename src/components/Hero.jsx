@@ -78,11 +78,11 @@ export default function Hero() {
             <span className="metric-number">180<span className="metric-plus">+</span></span>
             <span className="metric-label">Bespoke Residences</span>
           </div>
-          <div className="metric-divider" />
+          {/* <div className="metric-divider" />
           <div className="metric-item">
             <span className="metric-number">28</span>
             <span className="metric-label">Design Awards</span>
-          </div>
+          </div> */}
           <div className="metric-divider" />
           <div className="metric-item">
             <span className="metric-number">100<span className="metric-plus">%</span></span>

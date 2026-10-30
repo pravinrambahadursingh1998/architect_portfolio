@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, ArrowUpRight, Compass } from 'lucide-react';
+import { Moon, Sun, Menu, X, ArrowUpRight } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -36,7 +36,7 @@ export default function Navbar({ theme, toggleTheme }) {
     { name: 'Home', href: '#home', id: 'home' },
     { name: 'Expertise', href: '#expertise', id: 'expertise' },
     { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Team', href: '#team', id: 'team' },
+    // { name: 'Team', href: '#team', id: 'team' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -59,12 +59,16 @@ export default function Navbar({ theme, toggleTheme }) {
           className="brand-logo"
           id="brand-logo-link"
         >
-          <div className="logo-symbol">
-            <Compass size={22} className="compass-icon" />
+          <div className="logo-symbol-wrapper">
+            <img
+              src="/images/logo.png"
+              alt="S & A Design Logo"
+              className="brand-logo-img"
+            />
           </div>
           <div className="logo-text-group">
-            <span className="brand-name">STUDIO MITHUN</span>
-            <span className="brand-tagline">Architectural Interiors</span>
+            <span className="brand-name">S & A DESIGN</span>
+            <span className="brand-tagline">Interior Designer &bull; Turnkey Contractor</span>
           </div>
         </a>
 
