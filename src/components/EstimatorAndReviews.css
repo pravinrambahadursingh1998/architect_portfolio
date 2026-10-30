@@ -1,0 +1,333 @@
+.estimator-reviews-section {
+  background-color: var(--bg-primary);
+}
+
+/* Press Strip */
+.press-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 5.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.press-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.press-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.press-item {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  transition: var(--transition-fast);
+}
+
+.press-item:hover {
+  opacity: 1;
+  color: var(--gold-primary);
+}
+
+/* Testimonials */
+.testimonials-wrap {
+  margin-bottom: 5.5rem;
+}
+
+.section-header-centered {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.test-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.star-filled {
+  color: var(--gold-primary);
+  fill: var(--gold-primary);
+}
+
+.quote-icon {
+  color: var(--gold-primary);
+  opacity: 0.4;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 1.8rem;
+  flex-grow: 1;
+}
+
+.testimonial-author-block strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.testimonial-author-block span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Interactive Estimator */
+.estimator-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 960px) {
+  .estimator-box {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2.5rem;
+  }
+}
+
+.estimator-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 0.8rem;
+}
+
+.estimator-left h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.estimator-left p {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.estimator-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.control-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.type-buttons,
+.finish-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.type-btn,
+.finish-btn {
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.type-btn:hover,
+.finish-btn:hover {
+  border-color: var(--gold-border);
+  color: var(--text-primary);
+}
+
+.type-btn.active,
+.finish-btn.active {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  font-weight: 600;
+}
+
+.slider-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-value {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+}
+
+.range-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border-medium);
+  outline: none;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--gold-glow);
+  border: 2px solid #fff;
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Estimator Output Card */
+.estimator-output-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.output-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.output-timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-border);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+}
+
+.output-tier-title {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.output-tier-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.8rem;
+}
+
+.output-includes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+}
+
+.include-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.include-check {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.apply-estimate-btn {
+  width: 100%;
+  margin-top: auto;
+}

@@ -1,0 +1,273 @@
+/* ==========================================================================
+   STUDIO MITHUN - ARCHITECTURAL DESIGN SYSTEM & GLOBAL STYLES
+   ========================================================================== */
+
+:root {
+  /* Dark Theme (Default Luxury Aesthetic) */
+  --bg-primary: #0d0e11;
+  --bg-secondary: #14161a;
+  --bg-surface: #1c1e24;
+  --bg-card: rgba(26, 28, 34, 0.85);
+  --bg-card-hover: rgba(35, 38, 47, 0.95);
+  --bg-glass: rgba(13, 14, 17, 0.82);
+  --bg-input: #17191e;
+
+  --text-primary: #f6f5f0;
+  --text-secondary: #a2a6b0;
+  --text-muted: #6e727e;
+  --text-inverse: #0d0e11;
+
+  --gold-primary: #d4af37;
+  --gold-light: #e5c563;
+  --gold-dark: #b89124;
+  --gold-glow: rgba(212, 175, 55, 0.22);
+  --gold-border: rgba(212, 175, 55, 0.35);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-light: rgba(255, 255, 255, 0.2);
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.65);
+  --shadow-gold: 0 8px 30px rgba(212, 175, 55, 0.18);
+
+  --font-serif: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --max-width: 1280px;
+}
+
+[data-theme="light"] {
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f2eee8;
+  --bg-surface: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(250, 248, 245, 0.88);
+  --bg-input: #ffffff;
+
+  --text-primary: #191816;
+  --text-secondary: #5e5953;
+  --text-muted: #8d877f;
+  --text-inverse: #fbf9f5;
+
+  --gold-primary: #a37c35;
+  --gold-light: #be9548;
+  --gold-dark: #846122;
+  --gold-glow: rgba(163, 124, 53, 0.18);
+  --gold-border: rgba(163, 124, 53, 0.32);
+
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.14);
+  --border-light: rgba(0, 0, 0, 0.2);
+
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 8px 30px rgba(163, 124, 53, 0.15);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Utility Containers */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+.section-padding {
+  padding: 6.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
+
+.text-gold {
+  color: var(--gold-primary) !important;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-inverse);
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-gold);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.35);
+  background: linear-gradient(135deg, #f5d77f 0%, var(--gold-light) 100%);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  transform: translateY(-2px);
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

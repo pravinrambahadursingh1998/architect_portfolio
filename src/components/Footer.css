@@ -1,0 +1,237 @@
+.site-footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-medium);
+  padding: 5rem 0 2.5rem;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 992px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo-icon {
+  color: var(--gold-primary);
+}
+
+.footer-logo-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  max-width: 360px;
+}
+
+.footer-direct-enquiry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-enquiry-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.footer-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--gold-primary);
+  font-weight: 500;
+  word-break: break-all;
+  transition: var(--transition-fast);
+}
+
+.footer-email-icon {
+  flex-shrink: 0;
+  color: var(--gold-primary);
+}
+
+.footer-email-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.footer-socials a:hover {
+  background: var(--gold-primary);
+  color: var(--text-inverse);
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+}
+
+.footer-col-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--gold-primary);
+  padding-left: 4px;
+}
+
+.newsletter-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.newsletter-input:focus {
+  border-color: var(--gold-primary);
+}
+
+.newsletter-submit {
+  padding: 0.65rem 1.2rem;
+  background: var(--gold-primary);
+  color: var(--text-inverse);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.newsletter-submit:hover {
+  background: var(--gold-light);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 2rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.legal-links a:hover {
+  color: var(--gold-primary);
+}
+
+.dot-sep {
+  opacity: 0.5;
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition-fast);
+}
+
+.back-to-top-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}

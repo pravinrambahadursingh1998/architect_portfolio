@@ -1,0 +1,577 @@
+.contact-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 3.5rem;
+}
+
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form Card */
+.contact-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 600px) {
+  .contact-form-card {
+    padding: 1.8rem;
+  }
+}
+
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 650px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Success State */
+.submission-success-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.success-icon-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+}
+
+.submission-success-state h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.submission-success-state p {
+  font-size: 1rem;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.success-details-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.reset-form-btn {
+  margin-top: 1rem;
+}
+
+/* Atelier Visiting Card */
+.contact-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.atelier-visiting-card {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.card-glint {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.card-brand {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+}
+
+.card-badge {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-primary);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gold-border);
+}
+
+.card-tagline {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 2.2rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.info-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.info-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.info-row strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.info-row p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.info-row span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.copy-snippet-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  background: transparent;
+  padding: 0;
+  margin-top: 0.25rem;
+  transition: var(--transition-fast);
+}
+
+.copy-snippet-btn:hover {
+  text-decoration: underline;
+}
+
+/* Direct Chat Prompt */
+.direct-chat-prompt {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 2rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.chat-prompt-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.direct-chat-prompt h5 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-primary);
+}
+
+.direct-chat-prompt p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.chat-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chat-link:hover {
+  text-decoration: underline;
+}
+
+/* Form Routing Notice & Footer */
+.form-submit-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.form-routing-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.form-routing-notice .notice-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.form-routing-notice strong {
+  color: var(--gold-primary);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* Atelier Visiting Card Direct Email Link */
+.email-display-row {
+  margin-bottom: 0.25rem !important;
+}
+
+.atelier-email-link {
+  color: var(--gold-primary);
+  font-weight: 500;
+  transition: var(--transition-fast);
+  word-break: break-all;
+}
+
+.atelier-email-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+/* Success State Enhancements */
+.gold-text-highlight {
+  color: var(--gold-primary);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.inquiry-summary-preview {
+  width: 100%;
+  max-width: 520px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  margin-top: 0.25rem;
+}
+
+.summary-preview-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+}
+
+.summary-shield-icon {
+  color: var(--gold-primary);
+}
+
+.summary-preview-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.summary-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.summary-label {
+  color: var(--text-muted);
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.summary-val {
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.success-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.direct-email-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.88rem;
+}
+
+/* Instant Send Hub */
+.instant-send-hub {
+  width: 100%;
+  max-width: 520px;
+  background: var(--bg-surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  margin-top: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.hub-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.hub-icon {
+  color: var(--gold-primary);
+}
+
+.hub-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .hub-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hub-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.hub-btn-gmail {
+  background: var(--gold-primary);
+  color: var(--text-inverse);
+  border: 1px solid var(--gold-primary);
+}
+
+.hub-btn-gmail:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.hub-btn-mail:hover,
+.hub-btn-whatsapp:hover,
+.hub-btn-copy:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  transform: translateY(-1px);
+}
+
+/* Activation Notice Card for Pravin */
+.activation-notice-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 0.25rem;
+}
+
+.activation-alert-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.activation-notice-card strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--gold-primary);
+  margin-bottom: 0.25rem;
+}
+
+.activation-notice-card p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Card Action Links */
+.card-action-links {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.quick-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  text-decoration: none;
+}
+
+.quick-link-btn:hover {
+  text-decoration: underline;
+  color: var(--gold-light);
+}
+
+
