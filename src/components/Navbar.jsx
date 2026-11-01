@@ -61,7 +61,7 @@ export default function Navbar({ theme, toggleTheme }) {
         >
           <div className="logo-symbol-wrapper">
             <img
-              src="/images/logo.png"
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="S & A Design Logo"
               className="brand-logo-img"
             />
