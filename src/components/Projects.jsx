@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { PROJECTS_DATA, PROJECT_CATEGORIES } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
-import { ArrowUpRight, MapPin, Maximize2, Sparkles, Filter } from 'lucide-react';
+import { ArrowUpRight, MapPin, Maximize2, Sparkles, Filter, Layers } from 'lucide-react';
 import './Projects.css';
 
 export default function Projects({ onSelectProjectForInquiry }) {
@@ -68,6 +68,13 @@ export default function Projects({ onSelectProjectForInquiry }) {
                 <div className="project-category-badge">
                   {project.categoryLabel}
                 </div>
+
+                {project.gallery && project.gallery.length > 1 && (
+                  <div className="project-gallery-badge">
+                    <Layers size={12} />
+                    <span>{project.gallery.length} Views</span>
+                  </div>
+                )}
 
                 {/* Hover Reveal Button */}
                 <div className="project-view-action">

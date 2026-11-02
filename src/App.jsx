@@ -55,7 +55,7 @@ function App() {
         <Projects onSelectProjectForInquiry={handleSelectProjectForInquiry} />
 
         {/* 4. Team */}
-        <Team />
+        {/* <Team /> */}
 
         {/* 5. Interactive Scope Estimator & Reviews */}
         <EstimatorAndReviews onEstimateApply={handleEstimateApply} />
