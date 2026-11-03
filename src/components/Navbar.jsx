@@ -60,11 +60,13 @@ export default function Navbar({ theme, toggleTheme }) {
           className="brand-logo"
           id="brand-logo-link"
         >
-          <img
-            src={logoImg}
-            alt="S & A Design Logo"
-            className="brand-logo-img"
-          />
+          <div className="logo-symbol-wrapper">
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              alt="S & A Design Logo"
+              className="brand-logo-img"
+            />
+          </div>
           <div className="logo-text-group">
             <span className="brand-name">S & A DESIGN</span>
             <span className="brand-tagline">Interior Designer &bull; Turnkey Contractor</span>

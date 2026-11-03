@@ -1,11 +1,27 @@
-import { useEffect } from 'react';
-import { X, MapPin, Calendar, Maximize2, Award, Check, ArrowRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { X, MapPin, Calendar, Maximize2, Award, Check, ArrowRight, ChevronLeft, ChevronRight, Layers } from 'lucide-react';
 import './ProjectModal.css';
 
 export default function ProjectModal({ project, onClose, onSelectForInquiry }) {
+  const images = project?.gallery && project.gallery.length > 0
+    ? project.gallery
+    : (project?.image ? [project.image] : []);
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveImageIndex(0);
+  }, [project]);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        onClose();
+      } else if (e.key === 'ArrowRight' && images.length > 1) {
+        setActiveImageIndex((prev) => (prev + 1) % images.length);
+      } else if (e.key === 'ArrowLeft' && images.length > 1) {
+        setActiveImageIndex((prev) => (prev - 1 + images.length) % images.length);
+      }
     };
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKeyDown);
@@ -13,9 +29,21 @@ export default function ProjectModal({ project, onClose, onSelectForInquiry }) {
       document.body.style.overflow = 'auto';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  }, [onClose, images.length]);
 
   if (!project) return null;
+
+  const currentImage = images[activeImageIndex] || project.image;
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    setActiveImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setActiveImageIndex((prev) => (prev + 1) % images.length);
+  };
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -38,11 +66,66 @@ export default function ProjectModal({ project, onClose, onSelectForInquiry }) {
         <div className="modal-grid">
           {/* Visual Column */}
           <div className="modal-image-col">
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="modal-main-image" 
-            />
+            <div className="modal-main-image-wrap">
+              <img 
+                key={currentImage}
+                src={currentImage} 
+                alt={`${project.title} - View ${activeImageIndex + 1}`} 
+                className="modal-main-image" 
+              />
+
+              {/* Prev / Next Arrows */}
+              {images.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    className="modal-gallery-nav modal-nav-prev"
+                    onClick={handlePrev}
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft size={22} />
+                  </button>
+                  <button
+                    type="button"
+                    className="modal-gallery-nav modal-nav-next"
+                    onClick={handleNext}
+                    aria-label="Next image"
+                  >
+                    <ChevronRight size={22} />
+                  </button>
+                </>
+              )}
+
+              {/* Image Counter Badge */}
+              {images.length > 1 && (
+                <div className="modal-gallery-counter">
+                  <Layers size={13} />
+                  <span>{activeImageIndex + 1} / {images.length} Perspectives</span>
+                </div>
+              )}
+            </div>
+
+            {/* Thumbnail Strip */}
+            {images.length > 1 && (
+              <div className="modal-thumbnails-strip">
+                {images.map((imgSrc, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    className={`modal-thumb-item ${activeImageIndex === idx ? 'active' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveImageIndex(idx);
+                    }}
+                    aria-label={`Switch to image ${idx + 1}`}
+                  >
+                    <img src={imgSrc} alt="" />
+                    <span className="thumb-idx">{idx + 1}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+
             {project.awards && (
               <div className="modal-award-badge">
                 <Award size={16} />
