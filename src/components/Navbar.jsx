@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X, ArrowUpRight } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Navbar.css';
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -59,13 +60,11 @@ export default function Navbar({ theme, toggleTheme }) {
           className="brand-logo"
           id="brand-logo-link"
         >
-          <div className="logo-symbol-wrapper">
-            <img
-              src="/images/logo.png"
-              alt="S & A Design Logo"
-              className="brand-logo-img"
-            />
-          </div>
+          <img
+            src={logoImg}
+            alt="S & A Design Logo"
+            className="brand-logo-img"
+          />
           <div className="logo-text-group">
             <span className="brand-name">S & A DESIGN</span>
             <span className="brand-tagline">Interior Designer &bull; Turnkey Contractor</span>

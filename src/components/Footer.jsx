@@ -1,5 +1,6 @@
 import { ArrowUp, Mail } from 'lucide-react';
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from './Icons';
+import logoImg from '../assets/logo.png';
 import './Footer.css';
 
 const ENQUIRY_EMAIL = 'pravinrambahadursingh1998@gmail.com';
@@ -16,13 +17,11 @@ export default function Footer() {
         <div className="footer-top-grid">
           <div className="footer-brand-col">
             <div className="footer-logo">
-              <div className="footer-logo-wrapper">
-                <img
-                  src="/images/logo.png"
-                  alt="S & A Design Logo"
-                  className="footer-logo-img"
-                />
-              </div>
+              <img
+                src={logoImg}
+                alt="S & A Design Logo"
+                className="footer-logo-img"
+              />
               <div className="footer-logo-text">
                 <span className="footer-logo-title">S & A DESIGN</span>
                 <span className="footer-logo-subtitle">Interior Designer & Turnkey Contractor</span>
